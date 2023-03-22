@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <tr>
+                    <th>SrNo</th>
+                    <th>CourseName</th>
+                    <th>Request</th> 
+                </tr>
+
+               <tr *ngFor="let cc of courses;let i =index;">
+                <td>{{i+1}}</td>
+                <td>{{cc.coursename}}</td>
+               <td><a (click)="requestCourse(cc.coursename)" style="color:blue">Request for Course</a></td>    
+               </tr>
+            </table>
+        </div>
+        
+    </div>
+    
+
+</div>

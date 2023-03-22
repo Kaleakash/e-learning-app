@@ -1,0 +1,68 @@
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <table class="table">
+                <tr>
+                    <th>SrNo</th>
+                    <th>CourseName</th>
+                </tr>
+               <tr *ngFor="let cc of courses;let i =index;">
+                <td>{{i+1}}</td>
+                <td>{{cc.coursename}}</td>
+                <td><a (click)="viewCourseDetails(cc.coursename)" style="color:blue">Course Details</a></td>
+               </tr>
+            </table>
+        </div>
+        <div class="col-8">
+
+            <div *ngIf="flag">
+                <ul>
+                    <li *ngFor="let cc of chapterDetails">
+                        {{cc.chapterNumber}} ) 
+                       <b> {{cc.topic}}:</b>
+                        {{cc.topicContents}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    
+
+</div> -->
+
+<div class="row">
+    <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+            <table class="table">
+                <tr>
+                    <th>SrNo</th>
+                    <th>CourseName</th>
+                    <th>Course Details</th>
+                    <th>Delete Course</th>
+                </tr>
+               <tr *ngFor="let cc of courses;let i =index;">
+                <td>{{i+1}}</td>
+                <td>{{cc.coursename}}</td>
+                <td><a (click)="viewCourseDetails(cc.coursename)" style="color:blue">{{cc.coursename}} More...</a></td>
+                <td><a (click)="deleteCourse(cc)" style="color:blue">Delete</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-8">
+
+            <div *ngIf="flag">
+                <ul>
+                    <li *ngFor="let cc of chapterDetails">
+                        {{cc.chapterNumber}} ) 
+                       <b> {{cc.topic}}:</b>
+                        {{cc.topicContents}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+        
+    
+
+</div>

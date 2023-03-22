@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <table class="table">
+                <tr>
+                    <th>SrNo</th>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Current Status</th>
+                    <th>Status Update</th>
+                </tr>
+               <tr *ngFor="let cr of courseRequest;let i =index;">
+                <td>{{i+1}}</td>
+                <td>{{cr.student.substring(0,cr.student.indexOf('@'))}}</td>
+                <td>{{cr.course}}</td>
+                <td>{{cr.status}}</td>
+                
+                <td>
+                <span *ngIf="cr.status=='Pending'; else temp">   
+    <input type="radio" name="status" value="approved" #approvedRef (click)="(statusUpdate(approvedRef.value,cr))"/>Approved
+    <input type="radio" name="status" value="rejected" #rejectedRef (click)="(statusUpdate(rejectedRef.value,cr))"/>Rejected
+                </span>    
+                <ng-template #temp>
+                    Updated
+                </ng-template>
+            </td>     
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div>
+    <div class="row">
+    <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+    <table class="table">
+        <tr>
+            <th>SrNo</th>
+            <th>FName</th>
+            <th>LName</th>
+            <th>Gender</th>
+            <th>Technologies</th>
+            <th>PhoneNumber</th>
+            <th>EmailId</th>
+        </tr>
+        <tr *ngFor="let ff of faculties;let i=index;">
+            <td>{{i+1}}</td>
+            <td>{{ff.fname}}</td>
+            <td>{{ff.lname}}</td>
+            <td>{{ff.gender}}</td>
+            <td>{{ff.technologies}}</td>
+            <td>{{ff.phonenumber}}</td>
+            <td>{{ff.emailid}}</td>
+        </tr>
+    </table>
+    </div>
+    <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+        <img src="https://www.pngfind.com/pngs/m/468-4685298_faculty-icon-png-management-review-icon-transparent-png.png" height="540px" width="800px"/>
+    </div>
+</div>
+
+</div>

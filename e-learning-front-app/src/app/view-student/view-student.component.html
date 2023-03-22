@@ -1,0 +1,28 @@
+<div>
+    <div class="row">
+    <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+    <table class="table">
+        <tr>
+            <th>SrNo</th>
+            <th>FName</th>
+            <th>LName</th>
+            <th>Gender</th>
+            <th>Graduation</th>
+            <th>PhoneNumber</th>
+            <th>EmailId</th>
+        </tr>
+       <tr *ngFor="let ss of students;let i =index;">
+        <td>{{i+1}}</td>
+        <td>{{ss.fname}}</td>
+        <td>{{ss.lname}}</td>
+        <td>{{ss.gender}}</td>
+        <td>{{ss.graduation}}</td>
+        <td>{{ss.phonenumber}}</td>
+        <td>{{ss.emailid}}</td>
+       </tr>
+    </table>
+</div>
+<div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+    <img src="https://img.lovepik.com/free-png/20211203/lovepik-flat-student-png-image_401287736_wh1200.png" height="540px" width="800px"/>
+</div>
+</div>

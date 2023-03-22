@@ -1,0 +1,26 @@
+<div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+    <div >
+        <form class="login_form" [formGroup]="loginRef" (ngSubmit)="signIn()">
+           <fieldset>
+            <legend>Login Page</legend>
+               <div class="full field">
+                  <input type="email" placeholder="Email Address" formControlName="emailid" />
+               </div>
+               <div class="full field">
+                  <input type="password" placeholder="Password" name="password" formControlName="password"/>
+               </div>
+               <label>TypeOfUser</label>
+               <div class="typeofuser">
+                <input type="radio" formControlName="typeofuser" value="admin"/>Admin
+                <input type="radio" formControlName="typeofuser" value="faculty"/>Faculty
+                <input type="radio" formControlName="typeofuser" value="student"/>Student
+               </div>
+               <div class="button">
+                  <input type="submit" value="SignIn" class="btn btn-outline-secondary"/>
+                  <input type="reset" value="Reset" class="btn btn-outline-secondary"/>
+               </div>
+           </fieldset>
+        </form>
+         <a routerLink="/SignUp">SignUp</a>
+    </div>
+ </div>

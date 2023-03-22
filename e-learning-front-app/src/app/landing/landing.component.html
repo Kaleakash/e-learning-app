@@ -1,0 +1,92 @@
+<div>
+<div class="row">
+    
+    <div class="cols">
+        
+        <header class="top-header">
+
+            <nav class="navbar header-nav navbar-expand-lg">
+                
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="../../assets/images/logo.png" alt="image"></a>
+                    
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                        <div *ngIf=" menu===1 ">
+                        <ul class="navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a routerLink="login">Login</a></li>
+                            <li><a routerLink="courses">Courses</a></li>
+                            <li><a routerLink="news">News</a></li>
+                            <li><a routerLink="contactus">Contact us</a></li>
+                        </ul>
+                        </div>
+                        
+                        <div *ngIf="menu==2 ">
+                            <ul class="navbar-nav">
+                                <li><a routerLink="adminHome/viewFaculty">FacultyDetails</a></li>
+                                <li><a routerLink="adminHome/viewStudent">StudentDetails</a></li>
+                                <li><a routerLink="adminHome/viewCourse">CourseDetails</a></li>
+                                <li><a routerLink="adminHome/addCourse">Add Course</a></li>
+                                <li><a routerLink="adminHome/changePassword">Change Password</a></li>
+                                <li><a href="index.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div *ngIf="menu==4 ">
+                            <ul class="navbar-nav">
+                                <li><a routerLink="facultyHome/facultyViewCourse">CourseDetails</a></li>
+                                <li><a routerLink="facultyHome/updateCourse">Update Course</a></li>
+                                <li><a routerLink="facultyHome/viewStudentRequest">View Student Request</a></li>
+                                <li><a routerLink="facultyHome/changePassword">Change Password</a></li>
+                                <li><a href="index.html">Logout</a></li>
+                            </ul>
+                        </div>
+
+                        <div *ngIf="menu==3 ">
+                            <ul class="navbar-nav">
+                                <li><a routerLink="studentHome/viewCourseByStudent">Request For Course</a></li>
+                                <li><a routerLink="studentHome/viewCourseRequest">View Request</a></li>
+                                <li><a routerLink="studentHome/viewOwnCourse">Own Course</a></li>
+                                <li><a routerLink="studentHome/changePassword">Change Password</a></li>
+                                <li><a href="index.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" class="search-txt" placeholder="Search">
+                        <a class="search-btn">
+                            <img src="../../assets/images/search_icon.png" alt="#" />
+                        </a>
+                    </div>
+
+                </div>
+            </nav>
+
+        </header>
+
+    </div>
+
+</div>
+<hr/>
+<div class="row" style="margin-top: 60px;">
+    <div class="cols">
+        <div class="col-md-12">
+            <div class="ulockd-home-slider">
+                <div class="container-fluid">
+                    <div class="row">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
+</div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6">
+    
+        <select (change)="selectedCourse(courseRef.value)" #courseRef>
+        <option *ngFor="let cc of courses;let i =index;" value={{cc.coursename}}>
+            {{cc.coursename}}
+        </option>
+        </select>
+
+        <div *ngIf="flag">
+
+
+            <form class="addcourse_form" [formGroup]="course" (ngSubmit)="updateCourse()">
+                <fieldset>
+                 <legend>Add Course Details</legend>
+                   
+                   
+                     <div formArrayName="chapters">
+                         <div *ngFor="let chapter of chapters.controls; let i = index">
+                           <ng-container [formGroupName]="i"> 
+                          
+                           <input type="number" placeholder="ChapterNumber" formControlName="chapterNumber">
+                           <input type="input" placeholder="Topic Name" formControlName="topic">
+                           <input placeholder="Topic Content" formControlName="topicContents"/>
+                           <span class="remove" (click)="removeUser(i)" style="font-size: 30pt;">x</span>
+                          
+                           </ng-container>
+                           </div>
+                        </div> 
+               
+                    <input type="button" class="btn btn-outline-secondary" (click)="addChapter()" value="Add Chapter"/>
+                    <div class="button">
+                       <input type="submit" value="Update Course" class="btn btn-outline-secondary"/>
+                       <input type="reset" value="Reset" class="btn btn-outline-secondary"/>
+                    </div>
+                </fieldset>
+             </form> 
+
+
+            </div>
+        
+        </div>
+    
+    <div class="col-6">
+        <img src="https://media.istockphoto.com/id/1318375626/photo/new-chapter-words-typed-on-a-vintage-typewriter.jpg?s=612x612&w=0&k=20&c=3iKPFyZI-gDlqLJzub_6Vj4f8wz5YZSEzBHCaGRuidI=" height="540px" width="800px"/>
+    </div>
+</div>
+</div>

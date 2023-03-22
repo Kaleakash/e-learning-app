@@ -1,0 +1,39 @@
+<div class="layout_padding col-lg-6 col-md-6 col-sm-12">
+    <div >
+        <form class="login_form" [formGroup]="studentRef" (ngSubmit)="signUp()">
+           <fieldset>
+            <legend>Student Account Create</legend>
+               <div class="full field">
+                  <input type="text" placeholder="First Name" formControlName="fname" />
+               </div>
+
+               <div class="full field">
+                    <input type="text" placeholder="Last Name" formControlName="lname" />
+                </div>
+                <div class="gender">
+                    <input type="radio" formControlName="gender" value="male"/>Male
+                    <input type="radio" formControlName="gender" value="female"/>Female
+                </div>
+                <div class="full field">
+                    <input type="text" placeholder="Graduation" formControlName="graduation" />
+                </div>
+                <div class="full field">
+                    <input type="text" placeholder="phone number" formControlName="phonenumber" />
+                </div>
+                <div class="full field">
+                    <input type="emailid" placeholder="EmailId" name="emailid" formControlName="emailid"/>
+                 </div> 
+               <div class="full field">
+                  <input type="password" placeholder="Password" name="password" formControlName="password"/>
+               </div>
+               
+               <div class="button">
+                  <input type="submit" value="SignUp" class="btn btn-outline-secondary"/>
+                  <input type="reset" value="Reset" class="btn btn-outline-secondary"/>
+               </div>
+           </fieldset>
+        </form>
+         <a routerLink="/login">SignIn</a><br/>
+         <span style="color:red">{{msg}}</span>
+    </div>
+ </div>
