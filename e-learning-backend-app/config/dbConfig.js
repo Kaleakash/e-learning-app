@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const loginModel = require("../model/adminModel");
 
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb://database.1:27017/e-learning-db',{useNewUrlParser: true});
+mongoose.connect('mongodb://127.0.0.1:27017/e-learning-db',{useNewUrlParser: true});
 
 const db = mongoose.connection;
 
