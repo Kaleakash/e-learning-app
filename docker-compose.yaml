@@ -6,7 +6,7 @@ services:
       context: ./e-learning-front-app/
       dockerfile: Dockerfile
     ports:
-      - "80:80" 
+      - "81:80" 
     container_name: angular
     environment:
       - WATCHPACK_POLLING=true
@@ -28,6 +28,6 @@ services:
   database: 
     image: mongo 
     ports:
-      - "27017:27017"   
+      - "27018:27017"   
 volumes:
   data-volume:  
